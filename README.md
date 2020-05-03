@@ -4,7 +4,7 @@ hope you like it
 
 # Make sure you have install flask and anaconda 
 
-win+r - cmd -(inside command prompt)
+win+r - cmd -(inside command prompt
 1 - to run this file cd /file-location
 	- python pain.py or directly from visual studio code
 2 - http://localhost:5000/ in any browser
