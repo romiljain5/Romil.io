@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="{{ url_for('static',filename='img/icon_web.png') }}">
+    {% if title %}
+    <title>main - {{title}}</title>
+    {% else %}
+    <title>home</title>
+    {% endif %}  
+    
+   <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="{{ url_for('static' ,filename='bootstrap/jquery-slim.min.js') }}"></script>
+    
+   <!-- Bootstrap CSS -->
+   <link rel="stylesheet" href="{{ url_for('static',filename='bootstrap/bootstrap.min.css') }}">
+
+   <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/main.css') }}">
+
+   <!-- fonwesome from w3school -->
+   <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+   <!-- jquery -->
+   <script src="{{ url_for('static' ,filename='jquery/jquery.min.js')}}"></script>
+
+</head>
+<body>
+    <header class="site-header">
+        <nav class="navbar navbar-expand-md navbar-dark bg-steel fixed-top">
+            <div class="container">
+            <a class="logo mr-4" href="{{ url_for('blog') }}">Romil.io Blog</a>
+            <button class="hamburger navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon" ></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarToggle">
+                <div class="navbar-nav mr-auto">
+                <a class="nav-item nav-link" href="{{ url_for('home') }}">Home</a>
+                <a class="nav-item nav-link" href="{{ url_for('blog') }}">Blog</a>
+                <a class="nav-item nav-link" href="{{ url_for('about') }}">About</a>
+                </div>
+                <!-- Navbar Right Side -->
+                <div class="navbar-nav">
+                {% if current_user.is_authenticated %}
+                    <a class="nav-item nav-link" href="{{ url_for('new_post') }}">New Post</a>
+                    <a class="nav-item nav-link" href="{{ url_for('account') }}">Account</a>
+                    <a class="nav-item nav-link" href="{{ url_for('logout') }}">Logout</a>
+                {% else %}
+                    <a class="nav-item nav-link" href="{{ url_for('login') }}">Login</a>
+                    <a class="nav-item nav-link" href="{{ url_for('register') }}">Register</a>
+                {% endif %}
+                </div>
+            </div>
+            </div>
+        </nav>
+    </header>
+    
+        <div class="container">
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                {% for category, message in messages %}
+                    <div class="alert alert-{{ category }}">
+                        {{ message }}
+                    </div>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+        {% block content %}{% endblock content %}
+        </div>
+
+</body>
+
+    <script src="{{ url_for('static' ,filename='bootstrap/bootstrap.min.js')}}"></script>
+    <script src="{{ url_for('static' ,filename='bootstrap/popper.min.js')}}"></script>
+
+</html>

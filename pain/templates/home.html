@@ -1,0 +1,181 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="cen1">
+   <div class="container cen">
+        <div class="head-1">
+            Welcome I'M
+        </div>
+        <div class="head">
+            Romil Jain
+        </div>
+        <div class="head-0">
+            - A Creative Graphic Designer & Programmer
+        </div>
+        <div class="midbtn">
+            My Work
+        </div>
+        <div class="midbtn-1">
+            Know More
+        </div>
+    </div>
+    <div class="hr1" style="width: 100%;">
+        <hr>
+    </div>
+</div>
+
+
+    
+    <div class="container">
+        <div class="row" style="height: 100%;">
+            <div class="col">
+                <img width="100%" height="auto"  src="{{ url_for('static',filename='img/team-3.jpg') }}" alt="">
+            </div>
+            <div class="col">
+                <p class="h6"> &mdash; ABOUT ME  <br>
+                <p class="h4 pt-2"> Who Am I </p><br> 
+                <p style="color: rgba(65, 65, 65, 0.623);" class="text-left">
+                    My name is Romil Jain. I'm a Graphic Designer, Full-Stack web Developer & App developer. 
+                </p>
+                <div class="h5 text-center pb-2">
+                    Thing's I know in Programming 
+                </div>
+                <table class="table table-striped table-bordered">
+                    <tbody>
+                        <tr>
+                            <th scope="row">Html5</th>
+                            <th scope="row">Css3</th>
+                            <th scope="row">JavaScript</th>
+                            <th scope="row">jQuery</th>
+                        </tr>
+                        <tr>
+                            <th scope="row">Python</th>
+                            <th scope="row">JAVA</th>
+                            <th scope="row">React Native</th>
+                            <th scope="row">Android Studio</th>
+                        </tr>
+                        <tr>
+                            <th scope="row">Flask</th>
+                            <th scope="row">Django</th>
+                            <th scope="row">Bootstrap</th>
+                            <th scope="row">Unity</th>
+                        </tr>
+                    </tbody>
+                </table>
+
+                
+                <div class="h5 text-center pb-2 pt-4">
+                    Software's I know in Graphic Designing & Animation 
+                </div>
+                <table class="table table-striped table-bordered">
+                    <tbody>
+                        <tr>
+                            <th scope="row">Photoshop</th>
+                            <th scope="row">Illustrator</th>
+                            <th scope="row">Animate CC</th>
+                            <th scope="row">Invision Studio</th>
+                        </tr>
+                        <tr>
+                            <th scope="row">Lunacy</th>
+                            <th scope="row">blender</th>
+                            <th scope="row">Adobe XD</th>
+                            <th scope="row">Web Design</th>
+                        </tr>
+                        <tr>
+                            <th scope="row">Logo Design</th>
+                            <th scope="row">UI/UX Design</th>
+                            <th scope="row">3d Model</th>
+                            <th scope="row">Video Editing</th>
+                        </tr>
+                    </tbody>
+                </table>
+            </p>
+                <!-- <div class="midbtn">
+                    Download CV
+                </div> -->
+            </div>
+        </div>
+
+        <div class="headsnd mt-5">
+            Services & Previous works
+        </div>
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="card" style="width: auto; min-height: 200px;">
+                    <div class="card-body">
+                      <h5 class="card-title text-center">Graphic Designing</h5>
+                     <div onclick="location.href='{{ url_for('logo_design') }}'" class="cardbtn">
+                        My Works
+                    </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="card" style="width: auto; min-height: 200px;">
+                    <div class="card-body">
+                      <h5 class="card-title text-center">App Dev.</h5>
+                    <div onclick="location.href='{{ url_for('apps') }}'" class="cardbtn">
+                        My Apps
+                    </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="card" style="width: auto; min-height: 200px;">
+                    <div class="card-body">
+                      <h5 class="card-title text-center">3D Modeling</h5>
+                     <div class="cardbtn">
+                        My 3D Models
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+        <div class="row mb-5">
+            <div class="col-sm-4">
+                <div class="card" style="width: auto; min-height: 200px;">
+                    <div class="card-body">
+                      <h5 class="card-title text-center">Website Dev.</h5>
+                     <div onclick="location.href='{{ url_for('websites') }}'" class="cardbtn">
+                        Clients Websites
+                    </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="card" style="width: auto; min-height: 200px;">
+                    <div class="card-body">
+                      <h5 class="card-title text-center">Blog's</h5>
+                     <div onclick="location.href='{{ url_for('blog') }}'" class="cardbtn">
+                        My Blogs
+                    </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="card" style="width: auto; min-height: 200px;">
+                    <div class="card-body">
+                      <h5 class="card-title text-center">More Stuff's</h5>
+                     <div class="cardbtn">
+                        Know More
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+
+
+<!-- active nav btn when on page -->
+{% if url_for('home') or url_for('') %}
+<style>
+    .home-p{
+        color: #ff4500;
+    }
+</style>
+{% endif %}
+
+{% endblock content %}

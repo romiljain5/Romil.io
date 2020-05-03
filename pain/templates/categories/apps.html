@@ -1,0 +1,122 @@
+{% extends 'base.html' %}
+{% block content %}
+  <!-- ======= Hero Section ======= -->
+  <section id="hero">
+
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-7 pt-5 pt-lg-0 order-2 order-lg-1 d-flex align-items-center">
+          <div style="margin: 0 auto 0 auto;">
+
+            {% if request.path == url_for('apps') %}
+              <h1>Try Apps Build By <span>Romil Jain</span></h1>
+              <h2>My aim is to provide a great & user-friendly App's</h2>
+            {% elif request.path == url_for('websites') %}
+              <h1>Try Websites Build By <span>Romil Jain</span></h1>
+              <h2>My aim is to provide a great & user-friendly Website</h2>
+            {% elif request.path == url_for('logo_design') %}
+              <h1>Try Logo Designs Build By <span>Romil Jain</span></h1>
+              <h2>My aim is to provide a great & Eye-catching Logo's</h2>
+            {% elif request.path == url_for('ui_ux_design') %}
+              <h1>Try UI/UX Designs Build By <span>Romil Jain</span></h1>
+              <h2>I give my 100% to provide best User-Interface & User-Experience</h2>
+            {% endif %}
+
+            <div class="text-center text-lg-left">
+              <a href="#about" class="btn-get-started scrollto">Get Started</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-5 order-1 order-lg-2 hero-img">
+          
+          {% if request.path == url_for('apps') %}
+          <img class="img-fluid animated" src="{{ url_for('static',filename='img/hero-img.png') }}" alt="">
+          {% elif request.path == url_for('websites') %}
+          <img class="img-fluid animated" src="{{ url_for('static',filename='img/website.png') }}" alt="">
+          {% elif request.path == url_for('logo_design') %}
+          <img class="img-fluid animated" src="{{ url_for('static',filename='img/logo.png') }}" alt="">
+          {% elif request.path == url_for('ui_ux_design') %}
+          <img class="img-fluid animated" width="40%" src="{{ url_for('static',filename='img/website.png') }}" alt="">
+          <img class="img-fluid animated" width="40%" src="{{ url_for('static',filename='img/hero-img.png') }}" alt="">
+          {% endif %}
+        </div>
+      </div>
+    </div>
+
+    <svg class="hero-waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28 " preserveAspectRatio="none">
+      <defs>
+        <path id="wave-path" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z">
+      </defs>
+      <g class="wave1">
+        <use xlink:href="#wave-path" x="50" y="3" fill="rgba(255,255,255, .1)">
+      </g>
+      <g class="wave2">
+        <use xlink:href="#wave-path" x="50" y="0" fill="rgba(255,255,255, .2)">
+      </g>
+      <g class="wave3">
+        <use xlink:href="#wave-path" x="50" y="9" fill="#fff">
+      </g>
+    </svg>
+
+  </section><!-- End Hero -->
+
+  <main id="main">
+
+    <!-- ======= Pricing Section ======= -->
+    
+    {% if request.path == url_for('apps') %}
+    <section id="pricing" class="pricing" style="margin: 5% 0 5% 0;">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Apps</h2>
+          <p>Checkout my Apps</p>
+        </div>
+
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6">
+            <div class="box featured">
+              <span class="advanced">New</span>
+              <h3>Yoga App</h3>
+              <h4>For excercising Yoga and making yourself fit</h4>
+              <ul>
+                <li>Daily Tasks</li>
+                <li>BMI index Calculator</li>
+                <li>Try different YOGA asanas</li>
+                <li>Switch to your language</li>
+              </ul>
+              <div class="btn-wrap">
+                <a href="#" class="btn-buy">Download</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 mt-4 mt-md-0">
+            <div class="box featured">
+              <h3>Photoshop Shortcut Key</h3>
+              <h4><span>App for learning Photoshop shortcut keys</span></h4>
+              <ul>
+                <li>Table wise</li>
+                <li>All Important keys</li>
+                <li>easy to learn</li>
+                <li>easy to use</li>
+              </ul>
+              <div class="btn-wrap">
+                <a href="#" class="btn-buy">Download</a>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+
+      </div>
+    </section><!-- End Pricing Section -->
+    {% endif %}
+    
+
+  </main><!-- End #main -->
+
+
+
+{% endblock content %}

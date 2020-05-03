@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="head text-center">
+    This is Services page
+</div>
+
+<!-- active nav btn when on page -->
+{% if request.path == url_for('services') %}
+<style>
+    .services-p{
+         color: #ff4500;
+    }
+</style>
+{% endif %}
+{% endblock content %}

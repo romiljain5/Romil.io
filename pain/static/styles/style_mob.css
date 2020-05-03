@@ -1,0 +1,54 @@
+.desktop-navbar{
+    display: none;
+}
+/* mobile-navbar */
+.mobile-navbar{
+    display: flex;
+    border-bottom: 2px solid #ff4500;
+}
+
+/* ======= nav bar mobile ====== */
+body {
+    background: #fafafa;
+    color: #333333;
+  }
+
+.table th {
+    padding: .55rem;
+}
+.col .h6{
+  padding-top: 10px;
+}
+
+@font-face {
+    font-family: myFirstFont;
+    src: url(NIRMALAB.TTF);
+}
+
+body{
+    font-family: myFirstFont;
+}
+  /* ======= LOGO ======= */
+  .logo{
+    color: #ff4500;
+    font-size: 25px;
+    text-decoration: none;
+  }
+  .logo:hover,
+  .logo:active{
+    color: #ff4500;
+    text-decoration: none;
+  }
+  
+  .hamburger{
+    background-image: url("hamburger.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+.navbar-light .navbar-nav .nav-link {
+    color: #3f3f3f; 
+}
+.navbar-light .navbar-nav .nav-link:hover {
+    color: #ff4500; 
+}

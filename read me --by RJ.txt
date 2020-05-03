@@ -1,0 +1,23 @@
+  == win+r - cmd -(inside command prompt)
+1 - to run this file cd /file-location
+	- python pain.py or directly from visual studio code
+2 - http://localhost:5000/ in any browser
+
+
+REMAINING / CHANGES TO BE MADE :--
+1) In __init__.py file
+    # mail and password
+    app.config['MAIL_USERNAME'] = 'username'
+    app.config['MAIL_PASSWORD'] = 'password'
+
+	----- move this to .db file or in environment variable
+
+   & use email and enable "allow less secure apps" or Use two step verification in gmail
+
+2) Deployment use youtube video 
+   ---- 1) deploying to linux server
+   ---- 2) using custom domain name with free SSL certificate 
+
+3) To login as default user 
+   ---- 1) http://localhost:5000/login go to this link
+   ---- 2) Email: test@gmail.com ; password: testpassword
